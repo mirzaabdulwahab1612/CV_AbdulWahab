@@ -1,0 +1,338 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage[inline]{enumitem}
+% adjust the page margins
+\usepackage[scale=0.84]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+
+\usepackage{import}
+\usepackage{tikz}
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+
+
+% personal data
+\name{Abdul Wahab}{}
+\phone[mobile]{+1 647-836-5634}          % optional, remove / comment the line if not wanted
+\email{wahab1@ualberta.ca}            % optional, remove / comment the line if not wanted
+\homepage{mirzaabdulwahab1612.github.io}
+\extrainfo{\homepagesymbol\href{https://www.linkedin.com/in/abdul-wahab1612/}{LinkedIn}}
+%\photo[64pt][0pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%quote{"Hard work beats talent when talent does not work hard."}                                 % optional, remove / comment the line if not wanted
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\section{Education}
+
+\begin{itemize}
+\setlength\itemsep{0em}
+
+\item{\cventry{2021--Present}{\textbf{M.Sc--thesis Computer Science advised by \href{https://webdocs.cs.ualberta.ca/~whitem/}{Dr. Martha White \ExternalLink}}}{\textbf{\href{https://www.ualberta.ca/index.html}{University of Alberta \ExternalLink}}}{\textbf{Edmonton, Alberta}}{}
+{}}
+
+\item{\cventry{2016--2020}{\textbf{QS ranking (Computer Science) : 143 , Asian Ranking: 76}}{\textbf{\href{https://nust.edu.pk/}{National University of Sciences and Technology \ExternalLink}}}{\textbf{H-12 Islamabad}}{}
+{\textbf{Bachelors of Computer Science , CGPA: 3.96 / 4.00 , Summa Cum Laude}}}
+
+\end{itemize}
+
+
+\section{Publications}
+\begin{itemize}
+\setlength\itemsep{0em}
+
+    \item[] \textbf{A. Wahab}, M. A. Tahir, N. Iqbal, A. Ul-Hasan, F. Shafait and S. M. Raza Kazmi, \textbf{"A Novel Technique for Short-Term Load Forecasting Using Sequential Models and Feature Engineering,"} in IEEE Access, vol. 9, pp. 96221-96232, 2021, doi: 10.1109/ACCESS.2021.3093481. 
+     [\href{https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9467267}{Paper \ExternalLink}] [\href{https://github.com/mirzaabdulwahab1612/Short-Term-Load-Forecasting}{Code}]
+     
+    \item[]Ahmad, A.,\textbf{Wahab, A.}, Slyne, F., Zeb, S., Khan, R. A., \& Ruffini, M. \textbf{Capacity sharing approaches in multi-tenant, multi-service PONs for low-latency fronthaul applications based on cooperative-DBA.} 2020 Optical Fiber Communications Conference and Exhibition (OFC) (pp. 1-3). IEEE. [\href{https://ieeexplore.ieee.org/document/9083604}{ Paper \ExternalLink}] [\href{https://drive.google.com/file/d/1fbkpLMjf1HV5MGUCJaZCk-D8qqWH6grQ/view?usp=sharing}{Poster}]
+    
+\end{itemize}
+
+\section{Research Experience}
+\begin{itemize}
+\setlength\itemsep{0em}
+
+    \item{\cventry{September 2021 - }{Graduate Research Assistant advised by Dr. Martha White}
+    {\href{http://rlai.ualberta.ca/}{RLAI \ExternalLink}}{Edmonton, Canada}{}{}}
+    % \newline
+    \textbf{{Effective Exploration with Sample Efficient Architectures in Reinforcement Learning}
+    \newline
+    {Python\space\space\space\space|\space\space\space\space C++\space\space\space\space|\space\space\space\space Pytorch}
+    \newline}
+    In this work, we aim to combine theoretically backed exploration approaches with sample-efficient architectures.
+    
+
+    \textbf{{Understanding the Role of the Representation in Offline-Online Reinforcement Learning}
+    \newline
+    {Python\space\space\space\space|\space\space\space\space Pytorch}
+    \newline}
+    In this project, we use Two-timescale networks (TTN) in the Offline-Online setting, in which an agent is trained on offline data, and is then allowed to update the representation and the policy networks online. We empirically show that TTN is well suited for the Offline-Online setting as the online updates are more stable and the model converges relatively faster. We also study, analyze and compare different representation learning approaches like sparsity (FTA), input transformations (sparse, random, random-sparse), augmentation, and self-supervised contrastive losses in different combinations, to identify the best combination of these representation learning approaches.
+    
+
+    \item{\cventry{June 2019 - August 2019}{Research Intern}{\href{https://www.dfki.de/en/web/research/research-departments/augmented-vision/}{Augmented Vision Lab (DFKI) \ExternalLink}}{Kaiserslautern, Germany}{}{I was selected for summer research internship program in 2019 at the Augmented Vision lab,  under the supervision of {\href{https://av.dfki.de/members/stricker/}{Prof. Dr. Didier Stricker \ExternalLink}} and {\href{https://av.dfki.de/members/reis/}{Dr. Gerd Reis \ExternalLink}}.
+    \newline
+    \textbf{{Line-Scan Camera Input Processing with ConvLSTM architectures.}
+    \newline
+    {Python\space\space\space\space|\space\space\space\space Keras\space\space\space\space|\space\space\space\space TensorFlow}
+    \newline}
+     In this work, we explored the advantages of using a line-scan camera in industrial applications, where the point of observation is a single plane, for monitoring, classification, and segmentation of moving objects. A ConvLSTM based architecture was proposed, which extracts temporal correlation from the sequence of line-scans to compensate for the loss of spatial information in the individual line-scan (single row of pixels). The methodology evaluated on road crack segmentation datasets beats the current benchmark on four public datasets. The methodology was also evaluated on a novel dataset collected on the roads of Islamabad, Pakistan.
+    }}
+    
+    \item{\cventry{2018 - 2020}{Research Assistant}{\href{https://tukl.seecs.nust.edu.pk/}{TUKL R\&D Center \ExternalLink}}{NUST SEECS, Islamabad}{}{I have worked as a research assistant at TUKL-Lab under supervision of {\href{https://tukl.seecs.nust.edu.pk/members/shafait.html}{Dr. Faisal Shafait \ExternalLink}}. A few notable research projects I have contributed to: \newline
+    \textbf{{Short Term Energy Load Forecasting}
+    \newline
+    {Python\space\space\space\space|\space\space\space\space Keras\space\space\space\space|\space\space\space\space TensorFlow \newline}}
+    In this work, we compare and contrast individual household energy consumption patterns with aggregated consumption trends and propose a multi-level deep sequential architecture based on bi-directional sequential layers and feature fusion for accurate energy load forecasting. The proposed methodology outperforms the current benchmark on two public energy load consumption datasets.\newline\newline
+    \textbf{{TCP's RTO prediction using sequence modeling for controlling congestion, and lower latency.}
+    \newline
+    {Python\space\space\space\space|\space\space\space\space Keras\space\space\space\space|\space\space\space\space TensorFlow \space\space\space\space|\space\space\space\space NS2\space\space\space\space|\space\space\space\space Wireshark}
+    \newline}
+    TCP's Re-transmission Time-Out (RTO) delay is the time a host waits before retransmitting a packet. Accurate prediction of RTO is crucial for controlling TCP's congestion window and for maintaining lower latency. In this work, we propose an LSTM based architecture that inputs a sequence of past packet information such as Round Trip Time (RTT), RTO, size of the congestion window, etc., to predict the RTO for the next transmitted packet. The model was trained to effectively reduce the difference between the RTO and RTT to return the optimal value for RTO.
+    }}
+    
+\end{itemize}
+
+\section{Academic Experience}
+
+\begin{itemize}
+\setlength\itemsep{0em}
+    \item{\textbf{Teaching Assistant}}
+    \begin{itemize}
+    \setlength\itemsep{0em}
+    
+    \item{\cventry{Winter'2022}{\textbf{Marianne Morris}}{CMPUT-174 Foundations of Computation I}{UoAlberta}{}{}}
+    
+    \item{\cventry{Fall'2021}{\textbf{Dr. Janelle Harms}}{CMPUT-101 Introduction to Computing}{UoAlberta}{}{}}
+    
+    \item{\cventry{Spring'2020}{\textbf{Dr. Faisal Shafait}}{CS-471 Machine Learning}{NUST SEECS, Islamabad}{}{}}
+    % {My job responsibilities included designing weekly lab assignments and conducting a one-hour workshop on the weekly topic. I was also responsible for designing and conducting a competition based on an ML problem (forecasting the spread of COVID-19 in Pakistan). Furthermore, I was also responsible for marking exams, assignments, and quizzes.}}
+    
+    \item{\cventry{Fall'2019 \& Spring'2019}{\textbf{Dr. Arsalan Ahmad}}{EE-353 Computer Networks}{NUST SEECS, Islamabad}{}{}}
+    % {My main responsibilities were to design the semester project for the course and to help with student's queries. I was also responsible for marking exams, assignments, and quizzes.
+    % }}
+    
+    \item{\cventry{Fall'2018}{\textbf{Dr. Faisal Shafait}}{CS-250 Data Structures \& Algorithms}{NUST SEECS, Islamabad}{}{}}
+    % {My main responsibilities were to grade assignments, quizzes, exams, and end semester projects. Additionally, I was responsible for resolving any issue a student might face in the course.}}
+    
+    \item{\cventry{Fall'2018}{\textbf{Mr. Taufeeq-ur-Rehman}}{CS-235 Computer Organization and Assembly Language}{NUST SEECS, Islamabad}{}{}}
+    % {My main responsibilities were to grade assignments, quizzes, exams, and end semester projects. Additionally, I was responsible for resolving any issue a student might face in the course.}}
+    \end{itemize}
+        
+\end{itemize}
+
+% \subsection{Volunteer Work}
+% \begin{itemize}
+
+% \item{\cventry{September 2017-July 2018}{IT Executive}{ACM}{NUST SEECS, Islamabad}{}{}}
+
+% \item{\cventry{Two Day Workshop}{Instructor}{Introduction To Computer Programming Workshop}{NUST SEECS, Islamabad}{}{}
+
+% \item{\cventry{}{Instructor}{Peer To Peer Mentorship}{NUST SEECS, Islamabad}{}{}}}
+
+
+% \end{itemize}
+
+
+\section{Work Experience}
+
+\begin{itemize}
+\setlength\itemsep{0em}
+\item{\cventry{July 2020-July 2021}{Machine Learning and Computer Vision Engineer}{Veeve.io}{Islamabad, Pakistan}{}{
+\textbf{Python\space\space\space\space|\space\space\space\space C++\space\space\space\space|\space\space\space\space Keras\space\space\space\space|\space\space\space\space Tensorflow\space\space\space\space|\space\space\space\space OpenCV}
+\newline
+I developed machine learning and vision-based solutions for different modules of a smart shopping cart at {\href{https://veeve.io/}{Veeve.io \ExternalLink}}. I have worked on Cart State Tracking, Hand Motion Analysis, Trajectory Analysis, Gesture Prediction, Shrinkage Control, and Barcode through Vision modules. 
+}}
+
+\item{\cventry{July 2018-August 2018}{Research Intern}{VisionX Technologies LLC}{CIE NUST, Islamabad}{}{ 
+During my internship at \href{https://visionx.io/}{VisionX \ExternalLink}, I worked on: 
+ \newline
+\textbf{{Large Scale Visual Recognition}
+\newline
+{Python\space\space\space\space|\space\space\space\space Keras\space\space\space\space|\space\space\space\space TensorFlow}
+\newline}
+My research was oriented towards solving the problem of intra-class variations and class-imbalance for training. A dynamic model switching mechanism based on location along with hierarchical classification was proposed and developed for the problem.}}
+
+\item{\cventry{July 2018-August 2018}{Part-time Research Intern}{System Analysis \& Verification Lab}{NUST SEECS, Islamabad}{}{During my internship I worked  under supervision of \href{http://ohasan.seecs.nust.edu.pk/}{Dr. Osman Hasan \ExternalLink} on a:
+ \newline
+\textbf{{White Box Testing Tool}
+\newline
+{C++}
+\newline}
+I worked on the development of a white box testing tool kit for C++ projects. The tool provides three types of tests:
+\begin{enumerate*}
+    \item Dead Code Testing.
+    \item Assertion Based Testing.
+    \item Exception Testing.
+\end{enumerate*}
+}}
+
+% \item{\cventry{July 2017--September 2017}{Unity Game Developer}{Creatrixe Pvt Ltd}{Bahria Town, Rawalpindi}{}{During my internship I created four games, in Unity-3D for \href{http://creatrixe.com/}{Creatrixe PVT Ltd. \ExternalLink} :}\textbf{C\#\space\space\space\space|\space\space\space\space Unity}}
+
+% \begin{itemize*}
+%     \item{Two Police Dog Simulation games.}
+%     \item{One endless running game.}
+%     \item{One Hyper Casual knife flipping game.}
+% \end{itemize*}
+
+\end{itemize}
+
+\section{Awards \& Accolades}
+
+\begin{itemize}
+    \setlength\itemsep{0em}
+    \item[] \textbf{2020  } \textbf{President’s Gold Medal}, awarded for graduating with the highest distinction.
+    \item[] \textbf{2020 } Offered \textbf{PhD Computer Science position at Dartmouth College}. [Fully Funded] [Passed]
+    \item[] \textbf{2019 } Offered \textbf{PhD position at Augmented Vision Lab (TUK/DFKI)}. [Fully Funded] [Passed]
+    \item[] \textbf{2019  } Selected for summer research internship at Augmented Vision lab (DFKI), funded by DAAD (2900€).
+    \item[] \textbf{2019  } \textbf{Second Position in UG Star Researcher Competition} held in SEECS, NUST.
+    % \item[] \textbf{2016- }NUST Merit based Scholarship (all semesters).
+    \item[] \textbf{2016- }Dean’s list for high achievers and  Merit based Scholarship (all semesters).
+    % \item[] \textbf{2016  } First position in batch, HSSC-ICS Final Exams.
+    % \item[] \textbf{2014  } Gold medal for distinction in SSC-CS Final Exams.
+\end{itemize}
+
+\section{Skills}
+\vspace{3pt}
+
+\begin{itemize}
+\setlength\itemsep{0em}
+\item \textbf{Skills:} Reinforcement Learning, Machine Learning, Deep Learning, Sequence Modeling, Computer Vision.
+
+% \vspace{3pt}
+
+\item \textbf{Programming Languages:} Python, C++. I use Python and C++ for my research work and deployment.
+% \vspace{3pt}
+
+\item \textbf{Frameworks \& Libraries:} Pytorch, Tensorflow, and Keras for Reinforcement Learning, Machine Learning and Deep Learning projects. OpenCV is my go to library for classical vision related tasks.
+
+% \vspace{3pt}
+
+% \item \textbf{Database Systems:} SQL: MySQL ; NoSQL: Firebase.
+
+
+
+% \vspace{3pt}
+
+% \item \textbf{Web Development Tools} HTML5, CSS, JS, JQuery and PHP. 
+
+\end{itemize}
+
+
+\section{MOOCs}
+Other than my regular semester courses on Machine Learning, Artificial Intelligence and Computer Vision, I have taken the following courses online.
+\begin{itemize}
+\setlength\itemsep{0em}
+
+\item{\cventry{}{by Martha \& Adam White}{{Reinforcement Learning}}{Coursera}{}{}}
+
+\item{\cventry{}{by Mubarak Shah}{Computer Vision}{}{}{}}
+
+\item{\cventry{}{by Andrew Ng}{\href{https://www.coursera.org/learn/machine-learning}{Machine Learning \ExternalLink}}{Coursera}{}{}}
+\item{\cventry{}{by Andrew Ng}{\href{https://www.coursera.org/specializations/deep-learning}{Deep Learning Specialization \ExternalLink}}{Coursera}{}{
+\textbf{
+\begin{itemize}
+\item Neural Networks and Deep Learning
+\item Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization
+\item Structuring Machine Learning Projects
+\item Convolutional Neural Networks
+\item Sequence Models
+\end{itemize}}}}
+
+\item{\cventry{}{by Fei-Fei Li \& Andrej Karpathy}{CS231n: Convolutional Neural Networks for Visual Recognition}{}{}{}}
+
+
+\end{itemize}
+
+
+
+
+
+% \section{Interests \& Career Goals}
+
+% \begin{itemize}
+
+% \item{I am very interested in the following fields of Computer Science: AI, Machine Learning, Deep Learning and Computer Vision in Medical Imaging. I hope to pursue my education and career as a researcher in one of these field.}
+
+% \vspace{3pt}
+
+% \item{I am also interested in the field of Optical Computing and its applications like Optical Processors that can solve the problem of bit corruption (hardware limitations) when high speed electrical signals travel in parallel.}
+
+
+
+% \end{itemize}
+
+%\section{References}
+
+%\vspace{6pt}
+ 
+%\begin{itemize}
+
+%\item{Up to 3 references available on request}
+
+%\end{itemize}
+
+% Publications from a BibTeX file without multibib
+%  for numerical labels: \renewcommand{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}% CONSIDER MERGING WITH PREAMBLE PART
+%  to redefine the heading string ("Publications"): \renewcommand{\refname}{Articles}
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}                        % 'publications' is the name of a BibTeX file
+
+% Publications from a BibTeX file using the multibib package
+%\section{Publications}
+%\nocitebook{book1,book2}
+%\bibliographystylebook{plain}
+%\bibliographybook{publications}                   % 'publications' is the name of a BibTeX file
+%\nocitemisc{misc1,misc2,misc3}
+%\bibliographystylemisc{plain}
+%\bibliographymisc{publications}                   % 'publications' is the name of a BibTeX file
+
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
